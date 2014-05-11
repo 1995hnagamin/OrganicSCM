@@ -6,11 +6,13 @@
       (else (apply + (cons n args))))))
 
 (define (multiplying-infix k)
-  (lambda (n)
-    (* k n)))
+  (lambda (n) (* k n)))
 
 (define mono  (multiplying-affix 1))
+(define un mono)
+(define hen mono)
 (define di    (multiplying-affix 2))
+(define do di)
 (define tri   (multiplying-affix 3))
 (define tetra (multiplying-affix 4))
 (define penta (multiplying-affix 5))
@@ -19,7 +21,8 @@
 (define octa  (multiplying-affix 8))
 (define nona  (multiplying-affix 9))
 
+(define deca  (lambda (n) (+ 10 n)))
+(define cosa  (lambda (n) (+ 20 n)))
 (define conta (multiplying-infix 10))
 (define cta   (multiplying-infix 100))
 (define lia   (multiplying-infix 1000))
-
